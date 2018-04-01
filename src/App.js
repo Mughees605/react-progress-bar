@@ -8,7 +8,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      list: [1, 2, 3]
+      list: [1, 2, 3],
+
+
     }
   }
 
@@ -25,26 +27,99 @@ class App extends Component {
     this.state.list.map((d, i) => {
       return ($(`#steps${i}`)
         .stepProgressBar({
-          currentValue: 100 + i * 20,
+          currentValue: 10 + i * 20 ,
           steps: [
-            { value: d + 10 },
             {
-              topLabel: '50 custom unit',
+              topLabel: 'W',
+              value: 20,
+            },
+            {
+              topLabel:"Y",
+              value: 23,
+            },
+            {
+              topLabel:"I",
+              value: 26,
+            },
+            {
+              topLabel:"II",
+              value: 28,
+            },
+            {
+              topLabel:"III",
+              value: 30,
+            },
+            {
+              topLabel:"O",
+              value: 32,
+             
+            },
+            {
+              topLabel:"I",
+              value: 34,
+            },
+            {
+              topLabel:"II",
+              value: 36,
+            },
+            {
+              topLabel:"III",
+              value: 38,
+            },
+            {
+              topLabel:"BI",
+              value: 40,
+            },
+            {
+              topLabel:"I",
+              value: 42,
+            },
+            {
+              topLabel:"II",
+              value: 44,
+            },
+            {
+              topLabel:"III",
+              value: 46,
+            },
+            {
+              topLabel:"P",
+              value: 48,
+            },
+            {
+              topLabel:"I",
               value: 50,
-              bottomLabel: '<i class="material-icons">thumb_up</i>'
             },
             {
-              value: 150,
-              bottomLabel: '<i class="material-icons">card_giftcard</i>'
+              topLabel:"II",
+              value: 52,
             },
             {
-              value: 200,
-              bottomLabel: '<i class="material-icons">star</i>',
-              mouseOver: function () { alert('mouseOver'); },
-              click: function () { alert('click'); }
-            }
+              topLabel:"III",
+              value: 54,
+            },
+            {
+              topLabel:"Br",
+              value: 56,
+            },
+            {
+              topLabel:"I",
+              value: 58,
+            },
+            {
+              topLabel:"II",
+              value: 60,
+            },
+            {
+              topLabel:"III",
+              value: 62,
+            },
+            {
+              topLabel:"Bk",
+              value: 64,
+            },
+
           ],
-          unit: '€'
         })
       )
     })
@@ -52,7 +127,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className='step-progressbar'>
+      <div className='step-progressbar' style={{width:"800px"}}>
       </div>
     );
   }
